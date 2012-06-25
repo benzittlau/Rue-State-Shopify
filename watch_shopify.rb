@@ -1,13 +1,19 @@
 require 'watchr'
 require 'shopify_api'
+require 'ruby-debug'
+Watchr.options.debug = true
 
 KEY = "9d32d882837de419b73b0bed5cd15e99"
 SECRET = "21905fc42689da891888d8a3f0624cee"
 DOMAIN = "rue-state"
 
-watch('templates/.*.liquid') do |match|
-    puts "Updating #{match[0].inspect}..."
-      upload_template(match.to_s)
+watch(".*.liquid") do |match|
+  p match
+=begin
+  debugger
+  puts "Updating #{match[0].inspect}..."
+    #upload_template(match.to_s)
+=end
 end
 
 def upload_template(file)
