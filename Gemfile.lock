@@ -1,5 +1,6 @@
-PATH
-  remote: ../guard-shopify
+GIT
+  remote: https://github.com/benzittlau/guard-shopify
+  revision: 87cb72bd165e4e1b4f7e1ffe8e1a1b6721ff9438
   specs:
     guard-shopify (0.0.3)
       guard (>= 0.10.0)
