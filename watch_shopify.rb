@@ -1,3 +1,4 @@
+require 'watchr'
 require 'shopify_api'
 
 KEY = "9d32d882837de419b73b0bed5cd15e99"
