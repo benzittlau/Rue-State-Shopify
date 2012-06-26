@@ -18,7 +18,7 @@
   {% elsif product.options.size == 1 and product.variants.size > 1 %}
     <div class="select">
       <label>{{ product.options[0] }}</label>
-      <select id="product-select-{{ product.id }}" name='id'>
+      <select class="{{ product.options[0] }}" id="product-select-{{ product.id }}" name='id'>
         {% for variant in product.variants %}
           <option value="{{ variant.id }}">{{ variant.title }} - {{ variant.price | money }}</option>
         {% endfor %}
