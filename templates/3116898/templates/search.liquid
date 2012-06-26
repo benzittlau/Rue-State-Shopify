@@ -38,7 +38,12 @@
             
             <div class="{% if item.featured_image %}twelve{% else %}sixteen{% endif %} columns title_column">
               <p>
-                <a href="{{item.url }}" title="{{ item.title | escape }}">{{ item.title }}</a>
+                <a href="{{item.url }}" title="{{ item.title | escape }}">
+                  {% if item.vendor %}
+                    {{ item.vendor }} |
+                  {% endif %}
+                  {{ item.title }}
+                </a>
               </p> 
 
               {% if item.price %}

@@ -3,6 +3,11 @@
     <img {% if settings.align_height %}style="height:{{ settings.collection_height }}px"{% endif %} src="{{ product.featured_image | product_img_url: 'large' }}" alt="{{ product.featured_image.alt | escape }}" />
 
     <div class="info">                                              
+      <span class="vendor">
+        {{ product.vendor }}
+      </span>
+    </div>
+    <div class="info">                                              
       <span class="price">
         {% if product.compare_at_price_max > product.price %}
           <span class="was_price">{{ product.compare_at_price_max | money }}</span>
